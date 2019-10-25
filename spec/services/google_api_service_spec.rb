@@ -11,10 +11,10 @@ describe 'google api service' do
 
     expect(service).to be_a(GoogleApiService)
 
-    expect(raw_data).to be_a(Array)
+    expect(raw_data).to be_a(Hash)
 
-    expect(raw_data[:routes]).to have_key(:distance)
-    expect(raw_data[:routes]).to have_key(:steps)
-    expect(raw_data[:routes][:steps]).to have_key(:html_instructions)
+    expect(raw_data[:routes][0][:legs][0][:distance][:text]).to eq("0.9 mi")
+    expect(raw_data[:routes][0][:legs][0][:steps][0]).to have_key(:distance)
+    expect(raw_data[:routes][0][:legs][0][:steps][0]).to have_key(:html_instructions)
   end
 end
