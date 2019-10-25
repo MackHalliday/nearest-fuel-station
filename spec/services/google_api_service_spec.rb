@@ -15,6 +15,6 @@ describe 'google api service' do
 
     expect(raw_data[:routes]).to have_key(:distance)
     expect(raw_data[:routes]).to have_key(:steps)
-    expect(raw_data[:routes][:steps]).to have_key(:html_instructions))
+    expect(raw_data[:routes][:steps]).to have_key(:html_instructions)
   end
 end
