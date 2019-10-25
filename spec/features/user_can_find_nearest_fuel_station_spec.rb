@@ -37,6 +37,7 @@ describe "nearest fuel station" do
 
     expect(current_path).to eq("/search")
 
+    save_and_open_page
     #nearest electric station
     expect(page).to have_content("Name")
     expect(page).to have_content("Address")
@@ -44,5 +45,7 @@ describe "nearest fuel station" do
     expect(page).to have_content("Distance")
     expect(page).to have_content("Access Times")
     expect(page).to have_content("Head <b>southeast</b> on <b>17th St</b> toward <b>Larimer St</b>")
+
+
   end
 end
