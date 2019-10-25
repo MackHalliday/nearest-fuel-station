@@ -24,6 +24,8 @@
 # - The HTML direction instructions to get to that fuel station
 #   "Head <b>southeast</b> on <b>17th St</b> toward <b>Larimer St</b>"
 
+require 'rails_helper'
+
 describe "nearest fuel station" do
   it "can find nearest fuel station" do
 
@@ -42,5 +44,5 @@ describe "nearest fuel station" do
     expect(page).to have_content("Distance")
     expect(page).to have_content("Access Times")
     expect(page).to have_content("Head <b>southeast</b> on <b>17th St</b> toward <b>Larimer St</b>")
-  end 
+  end
 end
