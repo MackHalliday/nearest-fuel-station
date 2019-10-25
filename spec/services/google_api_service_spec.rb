@@ -1,14 +1,15 @@
 require 'rails_helper'
 
-
 describe 'google api service' do
   it "google location data" do
 
-    service = GoogleLocationApiService.new
+    #https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=ENV['GOOGLE_API']
 
-    raw_data = service.get_location_data("something")
+    service = GoogleApiService.new
 
-    expect(service).to be_a(GoogleLocationApiService)
+    raw_data = service.get_location_data("Turing", "")
+
+    expect(service).to be_a(GoogleApiService)
 
     expect(raw_data).to be_a(Array)
 
