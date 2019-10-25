@@ -40,6 +40,11 @@ class SearchFacade
     Destination.new(nrel_service[:fuel_stations][0])
   end
 
+  def travel_time
+    #did not have time to create object
+    google_service[:routes][0][:legs][0][:duration][:text]
+  end
+
   def distance
     #did not have time to create object
     google_service[:routes][0][:legs][0][:distance][:text]
